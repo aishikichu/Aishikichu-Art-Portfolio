@@ -187,7 +187,6 @@ const galleryImages = [
   { src: 'Images/poookiee14324.png',     alt: 'Commission artwork' },
   { src: 'Images/TAAMA,MAAMAMA.png',     alt: 'Commission artwork' },
   { src: 'Images/iconiii.jpg',           alt: 'Character artwork' },
-  { src: 'Images/1.png',                 alt: 'Commission artwork' },
   { src: 'Images/mantadsajdhsadhasdhs.png', alt: 'Commission artwork' },
 ];
 
