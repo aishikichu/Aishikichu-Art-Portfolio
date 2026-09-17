@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aishikichu — Art Portfolio &amp; Commissions</title>
+  <meta name="description" content="Aishikichu's art portfolio showcasing sketches and commissions. Commissions currently open!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== LOADER ===== -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <img src="Images/111aishikichu.png" alt="Aishikichu" class="loader-logo" />
+      <div class="loader-name">Aishikichu</div>
+    </div>
+  </div>
+
+  <!-- ===== CONSTELLATION CANVAS ===== -->
+  <canvas id="constellation" aria-hidden="true"></canvas>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <img src="Images/111aishikichu.png" alt="Aishikichu Logo" class="nav-logo-img" />
+        <span class="nav-logo-text">Aishikichu</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link" id="nav-home">Home</a></li>
+        <li><a href="#portfolio" class="nav-link" id="nav-portfolio">Portfolio</a></li>
+        <li><a href="#commissions" class="nav-link" id="nav-commissions">Commissions</a></li>
+        <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+        <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="nav-status">
+          <span class="status-dot open"></span>
+          <span class="status-text">Commissions Open</span>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+          <span class="theme-icon" id="themeIcon">☀️</span>
+        </button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#home" class="mobile-link">Home</a></li>
+      <li><a href="#portfolio" class="mobile-link">Portfolio</a></li>
+      <li><a href="#commissions" class="mobile-link">Commissions</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-logo-wrap">
+        <img src="Images/111aishikichu.png" alt="Aishikichu" class="hero-logo" />
+      </div>
+      <div class="hero-text">
+        <div class="hero-greeting">✦ hello, i am</div>
+        <h1 class="hero-title">Aishikichu</h1>
+        <p class="hero-sub">Sketches &amp; Commissions &middot; Anime-style illustrations</p>
+        <div class="hero-badges">
+          <span class="badge badge-open">&#x1F7E2; Commissions Open</span>
+          <span class="badge badge-art">&#x270F;&#xFE0F; Sketches &amp; Commissions</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#commissions" class="btn btn-primary" id="heroCommBtn">View Commissions</a>
+          <a href="#portfolio" class="btn btn-outline" id="heroPortBtn">See My Work</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO ===== -->
+  <section class="section portfolio-section" id="portfolio">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">✦ my work</span>
+        <h2 class="section-title">Portfolio</h2>
+        <p class="section-sub">A collection of my sketches and commissions ♡</p>
+      </div>
+      <div class="gallery-grid" id="gallery">
+        <div class="gallery-item"><div class="gallery-img-wrap"><img src="Images/0Manntaaaa.png" alt="Commission artwork" class="gallery-img" loading="lazy" /><div class="gallery-overlay"><button class="gallery-zoom" onclick="openLightbox(0)" aria-label="View full">&#x1F50D;</button></div></div></div>
+        <div class="gallery-item"><div class="gallery-img-wrap"><img src="Images/1 tamako.png" alt="Tamako commission" class="gallery-img" loading="lazy" /><div class="gallery-overlay"><button class="gallery-zoom" onclick="openLightbox(1)" aria-label="View full">&#x1F50D;</button></div></div></div>
+        <div class="gallery-item"><div class="gallery-img-wrap"><img src="Images/aisheeekeee.png" alt="Fox character artwork" class="gallery-img" loading="lazy" /><div class="gallery-overlay"><button class="gallery-zoom" onclick="openLightbox(2)" aria-label="View full">&#x1F50D;</button></div></div></div>
+        <div class="gallery-item"><div class="gallery-img-wrap"><img src="Images/chrissbrown.png" alt="Commission artwork" class="gallery-img" loading="lazy" /><div class="gallery-overlay"><button class="gallery-zoom" onclick="openLightbox(3)" aria-label="View full">&#x1F50D;</button></div></div></div>
+        <div class="gallery-item"><div class="gallery-img-wrap"><img src="Images/codehhhhhhh.png" alt="Sketch artwork" class="gallery-img" loading="lazy" /><div class="gallery-overlay"><button class="gallery-zoom" onclick="openLightbox(4)" aria-label="View full">&#x1F50D;</button></div></div></div>
+        <div class="gallery-item"><div class="gallery-img-wrap"><img src="Images/filipino boys.png" alt="Group commission" class="gallery-img" loading="lazy" /><div class="gallery-overlay"><button class="gallery-zoom" onclick="openLightbox(5)" aria-label="View full">&#x1F50D;</button></div></div></div>
+        <div class="gallery-item"><div class="gallery-img-wrap"><img src="Images/manntatatata.png" alt="Commission artwork" class="gallery-img" loading="lazy" /><div class="gallery-overlay"><button class="gallery-zoom" onclick="openLightbox(6)" aria-label="View full">&#x1F50D;</button></div></div></div>
+        <div class="gallery-item"><div class="gallery-img-wrap"><img src="Images/manta feet.png" alt="Commission artwork" class="gallery-img" loading="lazy" /><div class="gallery-overlay"><button class="gallery-zoom" onclick="openLightbox(7)" aria-label="View full">&#x1F50D;</button></div></div></div>
+        <div class="gallery-item"><div class="gallery-img-wrap"><img src="Images/manta kek.png" alt="Commission artwork" class="gallery-img" loading="lazy" /><div class="gallery-overlay"><button class="gallery-zoom" onclick="openLightbox(8)" aria-label="View full">&#x1F50D;</button></div></div></div>
+        <div class="gallery-item"><div class="gallery-img-wrap"><img src="Images/manta kik.png" alt="Commission artwork" class="gallery-img" loading="lazy" /><div class="gallery-overlay"><button class="gallery-zoom" onclick="openLightbox(9)" aria-label="View full">&#x1F50D;</button></div></div></div>
+        <div class="gallery-item"><div class="gallery-img-wrap"><img src="Images/mantatatatatata.png" alt="Commission artwork" class="gallery-img" loading="lazy" /><div class="gallery-overlay"><button class="gallery-zoom" onclick="openLightbox(10)" aria-label="View full">&#x1F50D;</button></div></div></div>
+        <div class="gallery-item"><div class="gallery-img-wrap"><img src="Images/poookiee14324.png" alt="Commission artwork" class="gallery-img" loading="lazy" /><div class="gallery-overlay"><button class="gallery-zoom" onclick="openLightbox(11)" aria-label="View full">&#x1F50D;</button></div></div></div>
+        <div class="gallery-item"><div class="gallery-img-wrap"><img src="Images/TAAMA,MAAMAMA.png" alt="Commission artwork" class="gallery-img" loading="lazy" /><div class="gallery-overlay"><button class="gallery-zoom" onclick="openLightbox(12)" aria-label="View full">&#x1F50D;</button></div></div></div>
+        <div class="gallery-item"><div class="gallery-img-wrap"><img src="Images/iconiii.jpg" alt="Character artwork" class="gallery-img" loading="lazy" /><div class="gallery-overlay"><button class="gallery-zoom" onclick="openLightbox(13)" aria-label="View full">&#x1F50D;</button></div></div></div>
+        <div class="gallery-item"><div class="gallery-img-wrap"><img src="Images/1.png" alt="Commission artwork" class="gallery-img" loading="lazy" /><div class="gallery-overlay"><button class="gallery-zoom" onclick="openLightbox(14)" aria-label="View full">&#x1F50D;</button></div></div></div>
+        <div class="gallery-item"><div class="gallery-img-wrap"><img src="Images/mantadsajdhsadhasdhs.png" alt="Commission artwork" class="gallery-img" loading="lazy" /><div class="gallery-overlay"><button class="gallery-zoom" onclick="openLightbox(15)" aria-label="View full">&#x1F50D;</button></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&#x2715;</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">&lsaquo;</button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next">&rsaquo;</button>
+    <div class="lightbox-img-wrap">
+      <img src="" alt="" id="lightboxImg" class="lightbox-img" />
+    </div>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+  </div>
+
+  <!-- ===== COMMISSIONS ===== -->
+  <section class="section commissions-section" id="commissions">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">✦ hire me</span>
+        <h2 class="section-title">Commissions</h2>
+        <div class="commission-status-banner open" id="statusBanner">
+          <div class="status-pulse" aria-hidden="true"></div>
+          <strong>&#x1F7E2; Commissions are currently OPEN!</strong>
+          <span>Slots available — reach out via Discord or Twitter ♡</span>
+        </div>
+      </div>
+      <div class="commsheet-wrap">
+        <img src="Images/Commsheet aishi.png" alt="Aishikichu Commission Sheet" class="commsheet-img" />
+      </div>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-icon">&#x1F5BC;&#xFE0F;</div>
+          <h3 class="price-type">Head Shot</h3>
+          <div class="price-amount">$15</div>
+          <p class="price-desc">Bust up portrait, expressive faces &amp; hair detail</p>
+        </div>
+        <div class="price-card featured">
+          <div class="price-badge">popular ✦</div>
+          <div class="price-icon">✨</div>
+          <h3 class="price-type">Bust-Up</h3>
+          <div class="price-amount">$25</div>
+          <p class="price-desc">From shoulders up, great for character refs &amp; icons</p>
+        </div>
+        <div class="price-card">
+          <div class="price-icon">&#x1F31F;</div>
+          <h3 class="price-type">Full Body</h3>
+          <div class="price-amount">$35</div>
+          <p class="price-desc">Full character illustration with outfit &amp; pose</p>
+        </div>
+        <div class="price-card">
+          <div class="price-icon">&#x1F465;</div>
+          <h3 class="price-type">Group Scene</h3>
+          <div class="price-amount">+75%</div>
+          <p class="price-desc">Per extra character added to the base price</p>
+        </div>
+      </div>
+      <div class="rules-wrap">
+        <div class="rules-card do-card">
+          <h4 class="rules-title">&#x2705; I Draw</h4>
+          <ul class="rules-list">
+            <li>Original Characters (OCs)</li>
+            <li>Simple backgrounds</li>
+            <li>Anime / manga style</li>
+            <li>Sketches &amp; commissions</li>
+          </ul>
+        </div>
+        <div class="rules-card tos-card">
+          <h4 class="rules-title">&#x1F4CB; Terms of Service</h4>
+          <ul class="rules-list">
+            <li>Personal use only</li>
+            <li>No refunds once started</li>
+            <li>Payments via PayPal</li>
+            <li>Credit me when posting ♡</li>
+          </ul>
+        </div>
+        <div class="rules-card dont-card">
+          <h4 class="rules-title">&#x274C; I Don't Draw</h4>
+          <ul class="rules-list">
+            <li>NSFW content</li>
+            <li>Gore</li>
+            <li>Complex mecha</li>
+            <li>Furry / Realistic portraits</li>
+          </ul>
+        </div>
+      </div>
+      <div class="commission-cta">
+        <a href="https://x.com/aishikichu" target="_blank" rel="noopener" class="btn btn-primary btn-lg" id="twitterButton">Request on Twitter ✦</a>
+        <a href="#contact" class="btn btn-outline btn-lg">Contact via Discord</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about-section" id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-art">
+          <div class="about-img-wrap">
+            <img src="Images/aisheeekeee.png" alt="Aishikichu artwork" class="about-img" />
+            <div class="about-img-deco" aria-hidden="true">
+              <div class="deco-star deco-star-1">✦</div>
+              <div class="deco-star deco-star-2">♡</div>
+              <div class="deco-star deco-star-3">✧</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-text">
+          <span class="section-tag">✦ about me</span>
+          <h2 class="section-title left">Hi, I'm Aishi!</h2>
+          <div class="about-bio">
+            <p>I'm an anime-style artist who loves making <strong>sketches and commissions</strong>! I enjoy drawing expressive characters with cozy, colorful vibes ✨</p>
+            <p>My style leans soft and playful — think cute outfits, fluffy hair, and little heart details sprinkled everywhere. Whether it's your OC or a fan character, I'd love to bring them to life ♡</p>
+          </div>
+          <div class="about-tags">
+            <span class="tag">✏️ Sketches</span>
+            <span class="tag">🎨 Commissions</span>
+            <span class="tag">💜 Anime Style</span>
+            <span class="tag">🦊 OC Friendly</span>
+            <span class="tag">🌸 Soft Colors</span>
+            <span class="tag">⭐ Commissions Open</span>
+          </div>
+          <div class="about-socials">
+            <a href="https://discord.com" target="_blank" rel="noopener" class="social-pill discord" id="discordLink">
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width:1.1rem;height:1.1rem;" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.082.114 18.104.132 18.12a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+              aishikichu.
+            </a>
+            <a href="https://x.com/aishikichu" target="_blank" rel="noopener" class="social-pill twitter" id="twitterLink">
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width:1.1rem;height:1.1rem;" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              @aishikichu
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact-section" id="contact">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">✦ get in touch</span>
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">Want to commission me or just say hi? Here's where to find me ♡</p>
+      </div>
+      <div class="contact-cards">
+        <a href="https://discord.com" target="_blank" rel="noopener" class="contact-card" id="contactDiscord">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:2rem;height:2rem;"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.082.114 18.104.132 18.12a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+          </div>
+          <h3>Discord</h3>
+          <p><strong>aishikichu.</strong> — DM me anytime!</p>
+          <span class="contact-link-text">aishikichu. ↗</span>
+        </a>
+        <a href="https://x.com/aishikichu" target="_blank" rel="noopener" class="contact-card" id="contactTwitter">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:2rem;height:2rem;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </div>
+          <h3>X / Twitter</h3>
+          <p>Follow me for updates, WIPs, and new art posts!</p>
+          <span class="contact-link-text">@aishikichu ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="Images/111aishikichu.png" alt="Aishikichu" class="footer-logo" />
+      <p class="footer-text">&copy; 2026 Aishikichu &middot; All artwork is original and belongs to me ♡</p>
+      <p class="footer-text small">Please credit when reposting &middot; Do not use for AI training</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
